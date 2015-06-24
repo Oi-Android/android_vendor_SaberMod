@@ -46,6 +46,10 @@ ifneq ($(filter %slimremix_trlteusc,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_trlteusc
 endif
 
+ifneq ($(filter %slimremix_trlteusc,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := slimremix_n7000
+endif
+
 ifneq ($(filter %slimremix_trltexx,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := slimremix_trltexx
 endif
