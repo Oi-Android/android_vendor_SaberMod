@@ -30,6 +30,10 @@ ifneq ($(filter %shamu,$(TARGET_PRODUCT)),)
   TARGET_DEVICE := shamu
 endif
 
+ifneq ($(filter %flounder,$(TARGET_PRODUCT)),)
+  TARGET_DEVICE := n7000
+endif
+
 # Filter ROM base
 ifneq ($(filter aosp% boostpop% pa% twisted%,$(TARGET_PRODUCT)),)
   TARGET_BASE_ROM := aosp
