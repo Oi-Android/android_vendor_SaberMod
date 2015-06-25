@@ -25,9 +25,8 @@ ifeq ($(strip $(HOST_OS)),linux)
 
   # Sabermod configs
   TARGET_ARCH := arm
-  TARGET_NDK_VERSION := 4.9
-  TARGET_SM_AND := 4.9-sm
-  TARGET_SM_KERNEL := 4.9-sm
+  TARGET_SM_AND := 4.9
+  TARGET_SM_KERNEL := 4.9
   N7000_THREADS := 4
   PRODUCT_THREADS := $(N7000_THREADS)
   LOCAL_STRICT_ALIASING := true
