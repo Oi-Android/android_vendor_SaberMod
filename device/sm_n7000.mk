@@ -47,6 +47,8 @@ EXTRA_SABERMOD_GCC_VECTORIZE := \
          -mvectorize-with-neon-quad
 
 ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
+  # Enable strict-aliasing kernel flags
+export CONFIG_ARCH_EXYNOS4_HLTE_STRICT_ALIASING := y
 
   # Check if something is already set in product/sm_products.mk
   ifndef LOCAL_DISABLE_STRICT_ALIASING
