@@ -344,6 +344,7 @@ export TARGET_ARCH_LIB_PATH := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_PREBUIL
           libart-compiler \
           libartd \
           libartd-compiler \
+          libandroid_runtime \
           libart-disassembler \
           libartd-disassembler \
           core.art-host \
@@ -405,6 +406,9 @@ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
           libskia \
           libvpx \
           libmedia_jni \
+          libbt \
+          libandroid_runtime \
+          libandroid \
           libstagefright_mp3dec \
           libart \
           mdnsd \
@@ -446,6 +450,7 @@ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
           libstagefright_amrnb_common \
           libart \
           libart-compiler \
+          libbt-brcm_stack \
           libjavacrypto \
           libstagefright_omx \
           libstagefright_amrnbdec \
@@ -455,6 +460,7 @@ export LIBRARY_PATH := $(TARGET_ARCH_LIB_PATH):$(LIBRARY_PATH)
           audio.r_submix.default \
           liboverlay \
           libmedia_jni \
+          libandroid_runtime \
           libstagefright_amrwbdec \
           libstagefright_avcenc \
           libstagefright_mp3dec \
@@ -514,6 +520,7 @@ ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
     libbt-brcm_bta \
     libnetd_client \
     libbt-brcm_stack \
+    libandroid_runtime \
     bcc \
     debuggerd \
     toolbox \
@@ -555,12 +562,16 @@ ifeq ($(strip $(LOCAL_STRICT_ALIASING)),true)
     libvariablespeed \
     libsurfaceflinger \
     libstagefright_amrnbdec \
+    FingerprintManager \
     librtp_jni \
     libOmxVenc \
     libwilhelm \
     libldnhncr \
     libdownmix \
+    libandroid \
     libqcomvisualizer \
+    libbt-brcm_stack \
+    libbt \
     libvisualizer \
     lsof \
     libcrypto \
@@ -605,7 +616,6 @@ endif
 # Bluetooth modules
 LOCAL_BLUETOOTH_BLUEDROID := \
   bluetooth.default \
-  libbt-brcm_stack \
   audio.a2dp.default \
   libbt-brcm_gki \
   libbt-utils \
